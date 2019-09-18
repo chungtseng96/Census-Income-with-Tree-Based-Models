@@ -49,7 +49,7 @@ Summary: Multiple columns have missing values, drop fnlwgt column, and binarize 
 ## Treating Missing Values  
 <font size="+2">
 Now that we know there are missing values, we need to treat them appropriately. There are several ways to treat missing values which include: deletion, impute with mean value, label encode as another level of categorical variable, or impute with predictive model. The best method to maintain the integrity of the data set is to impute with a predictive model. To do so we need to create two functions to help us execute this process in an efficient manner.  <br>
-
+<br>
 Function 1: One Hot Encoder <br>
 Since marchine learning algorithms can't work with categorical data directly, we have to convert them into integers. 
 The function below takes two parameters: a dataframe and column(s) of that dataframe. 
