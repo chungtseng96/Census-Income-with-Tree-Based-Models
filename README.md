@@ -11,6 +11,7 @@
  Classification objective: To determine if a person makes over 50 thousand dollars a year. <br>
  This multivariate data set contains 48,842 instances and 14 attributes. <br>
  
+ 
  **Attributes** <br>
  Age: Continuous. <br>
  Workclass: Categorical <br>
@@ -50,7 +51,8 @@ Summary: Multiple columns have missing values, drop fnlwgt column, and binarize 
 <font size="+2">
 Now that we know there are missing values, we need to treat them appropriately. There are several ways to treat missing values which include: deletion, impute with mean value, label encode as another level of categorical variable, or impute with predictive model. The best method to maintain the integrity of the data set is to impute with a predictive model. To do so we need to create two functions to help us execute this process in an efficient manner.  <br>
 <br>
-Function 1: One Hot Encoder <br>
+
+**Function 1**: One Hot Encoder <br>
 Since marchine learning algorithms can't work with categorical data directly, we have to convert them into integers. 
 The function below takes two parameters: a dataframe and column(s) of that dataframe. 
 The function converts the selected columns into dummy/indicator variables using the pandas.get_dummies function and then merge it with the rest of the columns. 
@@ -64,7 +66,7 @@ def onehotencoder(df, df_cols):
     return (pd.concat([df_1, df_2], axis=1, join='inner'))
 ```
 
-Function 2: Logistic Regression imputation. <br>
+**Function 2**: Logistic Regression imputation. <br>
 Objective: To use logistic regression to impute missing data in the workclass, occupation, and native-country columns. <br>
 The function will essentially use instances with no missing values as training data with workclass, occupation, and natuve-country as dependent variables and all other columns as independent variables. The testing data will be instances with missing values. Then the function will fit a logistic regression with the trianing data and predict with the testing data. The result is a dataset with missing values filled with logistic regression predicted values.
 
