@@ -223,15 +223,15 @@ sensitivity:	0.438244 <br>
 specificity:	0.949294 <br>
 error_rate:	0.173821 
 
-<img src="/images/dtree_pipe.png" width="450" height="200">
+<img src="/images/dtree_pipe.png" width="450" height="250">
  
+**Hyperparameter Tuning**
+Parameters to tune: Max_depth, min_samples_split, min_samples_leaf, max_features, and criterion. 
 
 
 
 
 
-
-## Visualizing Model Output
 ## Conclusion 
 
 
