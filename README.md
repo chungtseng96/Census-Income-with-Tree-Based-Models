@@ -221,8 +221,9 @@ recall:	0.438244 <br>
 f_measure:	0.548484 <br>
 sensitivity:	0.438244 <br>
 specificity:	0.949294 <br>
-error_rate:	0.173821 <br>
- <img src="/images/dtree_pipe.png" width="500" height="400">
+error_rate:	0.173821 
+
+<img src="/images/dtree_pipe.png" width="450" height="200">
  
 
 
