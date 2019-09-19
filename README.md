@@ -215,14 +215,14 @@ tree1_res = model_eval(y_test, tree_clf_1_pred)
 ```
 
 Model Performance: <br>
-{'accuracy': 0.8261789394663209, <br>
- 'precision': 0.7328280435812411, <br>
- 'recall': 0.4382436260623229, <br>
- 'f_measure': 0.5484843112923239, <br>
- 'sensitivity': 0.4382436260623229, <br>
- 'specificity': 0.9492942551469927, <br>
- 'error_rate': 0.17382106053367907} <br>
- 
+accuracy:	0.826179 <br>
+precision:	0.732828 <br>
+recall:	0.438244 <br>
+f_measure:	0.548484 <br>
+sensitivity:	0.438244 <br>
+specificity:	0.949294 <br>
+error_rate:	0.173821 <br>
+ <img src="/images/dtree_pipe.png" width="500" height="400">
  
 
 
