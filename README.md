@@ -118,13 +118,13 @@ freq_occ
 <br>
 Tabulate Frequency of Race
 <img src="/images/race count.PNG" width="250" height="150">
-
+<br>
 Tabulate Frequency of Workclass
-*Image*
-
+<img src="/images/workclass.PNG" width="250" height="200">
+<br>
 Tabulate Frequency of Education
-*Image*
-
+<img src="/images/edu count.PNG" width="200" height="300">
+<br>
 **Graphical Multivariant EDA**
 Correlation Matrix 
 *Image*
