@@ -100,6 +100,55 @@ Once we run both functions on our data set we can see that we don't have anymore
 </font>
  
 ## Exploratory Data Analysis 
+<font size="+2">
+In this section we will use graphical and non-graphical exploratory data analysis to summarize the data set's main characteristics such as distribution, correlation, range, and behavior. <br>
+
+**Non-Graphical Univariant EDA** <br>
+Tabulate Frequency of Occupation 
+
+```python 
+freq_occ = pd.DataFrame(adult.occupation.value_counts())
+freq_occ = freq_occ.rename(columns = {'occupation':'Count'})
+freq_occ['Proportion'] = freq_occ['Count']/freq_occ.Count.sum()
+freq_occ['Percent'] = freq_occ.Proportion*100
+freq_occ
+```
+
+<img src="/images/occu.PNG" width="240" height="300">
+<br>
+Tabulate Frequency of Race
+<img src="/images/race count.PNG" width="250" height="150">
+
+Tabulate Frequency of Workclass
+*Image*
+
+Tabulate Frequency of Education
+*Image*
+
+**Graphical Multivariant EDA**
+Correlation Matrix 
+*Image*
+
+Income Level Pie Chart 
+*Image*
+
+Class vs. Occupation Count Plot 
+*Image*
+
+Education Count Plot 
+*Image*
+
+Class vs. Race Count Plot 
+*Image*
+
+Class vs. Gender Count Plot 
+*Image*
+
+
+</font>
+
+
+
 ## Data Preprocessing
 ## Building the Model
 ## Visualizing Model Output
