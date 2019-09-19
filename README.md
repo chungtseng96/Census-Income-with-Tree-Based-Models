@@ -172,9 +172,46 @@ adult_data = pd.concat([adult_noncat, adult_cat], axis = 1, join = 'inner')
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(adult_data, adult_label, test_size = 0.3, random_state = 21)
 ```
- 
 </font>
+
 ## Building the Model
+Now that we have everything set up, we can start building the model. 
+The first step to building our model is creating model evaluation function so we can measure and track the performance of our model.
+The function below will take 2 parameters as inputs: actual testing values and predicted values.
+Our model_eval function will create a confusion matrix and store the results in 4 variables: true positive (tp), true negative (tn), false positive (fp), and false negative (fn).
+The function will then use the variables to calculate accuracy, precision, recall, f_measure, sensitivity, specificity, and error_rate. 
+
+```python
+#Model Evaluation Function 
+from sklearn.metrics import confusion_matrix
+def model_eval(true, pred):
+    #Confusion Matrix 
+    true = true.reshape(len(true),)
+    tn, fp, fn, tp = confusion_matrix(true, pred).ravel()
+    #Output 
+    output = {}
+    output['accuracy'] = ((tp+tn))/(tp+fn+fp+tn)
+    output['precision'] = (tp)/(tp+fp)
+    output['recall'] = (tp)/(tp+fn)
+    output['f_measure'] = (2*output['recall']*output['precision'])/(output['recall']+output['precision'])
+    output['sensitivity'] = tp / (tp + fn)
+    output['specificity'] = tn / (tn + fp)
+    output['error_rate'] = 1 - output['accuracy']
+    return output
+```
+
+**Building Decision Trees**
+
+
+
+
+
+
+
+
+
+
+
 ## Visualizing Model Output
 ## Conclusion 
 
