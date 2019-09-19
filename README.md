@@ -29,7 +29,7 @@
 ## Preliminary Data Analysis 
 <font size="+2">
  Before we jump into any type of analysis or modeling we need to understand the quality, structure, and the range of our data. The purposes of preliminary data analysis are to modify the data to prepare it for further analysis. To perform our preliminary data analysis, we need to first install relavant dependencies such as numpy, pandas, and matplotlib. After we read our data set into a pandas dataframe, we can take a quick high-level overview of our data using the info and describe method. Some common data quality problems we can extract from the info method output are: missing values, data types, attributes, and memory usage. From the describe method we can extract basic statistical information from our data set. See below for info and describe method outputs. 
-<img src="/images/info.PNG" width="500" height="500">
+<img src="/images/info.PNG" width="500" height="530">
 <br> From a quick glance at the outputs, we can see that there are no missing values. However, if we take a look closer look we will see that missing values are expressed a question mark ('?')
 I used the code below to count the number of missing values in each column.
  
@@ -125,24 +125,25 @@ Tabulate Frequency of Workclass
 Tabulate Frequency of Education
 <img src="/images/edu count.PNG" width="200" height="300">
 <br>
-**Graphical Multivariant EDA**
-Correlation Matrix 
-*Image*
 
-Income Level Pie Chart 
-*Image*
-
-Class vs. Occupation Count Plot 
-*Image*
-
-Education Count Plot 
-*Image*
-
-Class vs. Race Count Plot 
-*Image*
-
-Class vs. Gender Count Plot 
-*Image*
+**Graphical Multivariant EDA** <br>
+Correlation Matrix <br>
+<img src="/images/corr.png" width="400" height="400">
+<br>
+Income Level Pie Chart <br>
+<img src="/images/income.png" width="300" height="300">
+<br>
+Class vs. Occupation Count Plot <br>
+<img src="/images/class vs occ.png" width="700" height="400">
+<br>
+Education Count Plot <br>
+<img src="/images/edu.png" width="700" height="400">
+<br>
+Class vs. Race Count Plot <br>
+<img src="/images/race.png" width="700" height="400">
+<br>
+Class vs. Gender Count Plot <br>
+<img src="/images/sex.png" width="500" height="400">
 
 
 </font>
