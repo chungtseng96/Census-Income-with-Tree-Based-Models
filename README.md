@@ -148,9 +148,32 @@ Class vs. Gender Count Plot <br>
 
 </font>
 
-
-
 ## Data Preprocessing
+<font size="+2">
+Before we move onto building the actual model, we need to preprocess our dataset into a format in which the Scikit-Learn algorithms can process. This includes binarizing the target variable, converting categorical features into dummy variables, and splitting the data set into training and testing data. 
+We will use LabelBinarizer, train_test_split from Scikit-Learn preprocessing and pandas get_dummy function to perform these tasks.
+ 
+```python
+#Seperating target variable from the rest of the features
+adult_data = adult.drop(columns = ['class'])
+adult_label = adult['class']
+
+#Binarize target label
+from sklearn.preprocessing import LabelBinarizer 
+Binarizer = LabelBinarizer()
+adult_label = Binarizer.fit_transform(adult_label)
+
+#Converting all categorical features into dummy variables
+adult_cat = pd.get_dummies(adult_data.select_dtypes('object'))
+adult_noncat = adult_data.select_dtypes(exclude = 'object')
+adult_data = pd.concat([adult_noncat, adult_cat], axis = 1, join = 'inner')
+
+#Train Test Split
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(adult_data, adult_label, test_size = 0.3, random_state = 21)
+```
+ 
+</font>
 ## Building the Model
 ## Visualizing Model Output
 ## Conclusion 
