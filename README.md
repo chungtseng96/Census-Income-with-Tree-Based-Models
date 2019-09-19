@@ -29,7 +29,7 @@
 ## Preliminary Data Analysis 
 <font size="+2">
  Before we jump into any type of analysis or modeling we need to understand the quality, structure, and the range of our data. The purposes of preliminary data analysis are to modify the data to prepare it for further analysis. To perform our preliminary data analysis, we need to first install relavant dependencies such as numpy, pandas, and matplotlib. After we read our data set into a pandas dataframe, we can take a quick high-level overview of our data using the info and describe method. Some common data quality problems we can extract from the info method output are: missing values, data types, attributes, and memory usage. From the describe method we can extract basic statistical information from our data set. See below for info and describe method outputs. 
- **Image**
+<img src="/images/info.PNG" width="500" height="500">
 <br> From a quick glance at the outputs, we can see that there are no missing values. However, if we take a look closer look we will see that missing values are expressed a question mark ('?')
 I used the code below to count the number of missing values in each column.
  
